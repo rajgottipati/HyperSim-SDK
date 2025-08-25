@@ -1,0 +1,70 @@
+{
+  "_source_id": 9,
+  "sources": {
+    "HyperCore HyperEVM Integration Analysis": {
+      "https://hyperliquid-co.gitbook.io/wiki/architecture/hyperevm": {
+        "id": 1,
+        "publisher": "Hyperliquid Official Wiki",
+        "url": "https://hyperliquid-co.gitbook.io/wiki/architecture/hyperevm",
+        "title": "HyperEVM Architecture Documentation",
+        "info": "Comprehensive technical documentation on HyperEVM architecture, EVM specification (Cancun without blob), dual-block architecture, integration with HyperCore, unified token management, and cross-layer communication mechanisms"
+      },
+      "https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/hyperevm": {
+        "id": 2,
+        "publisher": "Hyperliquid Official Documentation",
+        "url": "https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/hyperevm",
+        "title": "HyperEVM Developer Guide",
+        "info": "Developer-focused documentation covering JSON-RPC API interactions, dual-block architecture, testnet/mainnet environments, and technical specifications for building on HyperEVM"
+      },
+      "https://www.blockhead.co/2025/06/05/inside-hyperliquids-technical-architecture/": {
+        "id": 3,
+        "publisher": "Blockhead",
+        "url": "https://www.blockhead.co/2025/06/05/inside-hyperliquids-technical-architecture/",
+        "title": "Inside Hyperliquid's Technical Architecture",
+        "info": "In-depth technical analysis of HyperBFT consensus mechanism, dual-block architecture, unified state design, read precompiles for cross-layer communication, performance metrics, and comparison with other blockchains"
+      },
+      "https://www.gate.com/learn/course/l1-deep-dives-hyperliquid-hype/hyper-evm-and-smart-contract-integration": {
+        "id": 4,
+        "publisher": "Gate.com",
+        "url": "https://www.gate.com/learn/course/l1-deep-dives-hyperliquid-hype/hyper-evm-and-smart-contract-integration",
+        "title": "HyperEVM and Smart Contract Integration",
+        "info": "Technical guide covering HyperEVM integration patterns, system contracts for L1 data access, development tools, cross-chain interoperability, and use cases for DeFi applications"
+      },
+      "https://blog.redstone.finance/2025/08/21/hyperliquid/": {
+        "id": 5,
+        "publisher": "RedStone Finance",
+        "url": "https://blog.redstone.finance/2025/08/21/hyperliquid/",
+        "title": "Hyperliquid Report: HyperEVM, HIP-3, HyperCore and Integration Patterns",
+        "info": "Comprehensive technical analysis of CoreWriter mechanism, cross-layer operations, Builder Codes, HIP-3 market deployment, liquid staking tokens, HyperUnit tokenization protocol, and oracle architecture"
+      },
+      "https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/hyperevm/dual-block-architecture": {
+        "id": 6,
+        "publisher": "Hyperliquid Official Documentation",
+        "url": "https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/hyperevm/dual-block-architecture",
+        "title": "Dual-Block Architecture Technical Specifications",
+        "info": "Technical specifications for dual-block architecture including mempool implementation, nonce handling, transaction pruning, and block numbering systems"
+      },
+      "https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/hyperevm/interacting-with-hypercore": {
+        "id": 7,
+        "publisher": "Hyperliquid Official Documentation",
+        "url": "https://hyperliquid.gitbook.io/hyperliquid-docs/for-developers/hyperevm/interacting-with-hypercore",
+        "title": "Interacting with HyperCore - CoreWriter and Precompiles",
+        "info": "Detailed information about CoreWriter contract, precompiles, action encoding patterns, and integration examples for HyperCore interaction"
+      },
+      "https://docs.layerzero.network/v2/developers/hyperliquid/hyperliquid-concepts": {
+        "id": 8,
+        "publisher": "LayerZero Documentation",
+        "url": "https://docs.layerzero.network/v2/developers/hyperliquid/hyperliquid-concepts",
+        "title": "Hyperliquid Core Concepts - Precompiles and System Contracts",
+        "info": "Comprehensive guide to Hyperliquid precompiles including system contracts, L1ActionPrecompiles, CoreWriter functionality, asset bridge mechanisms, and payload encoding specifications"
+      },
+      "https://medium.com/@ambitlabs/the-not-so-definitive-guide-to-hyperliquid-precompiles-f0b6025bb4a3": {
+        "id": 9,
+        "publisher": "Ambit Labs",
+        "url": "https://medium.com/@ambitlabs/the-not-so-definitive-guide-to-hyperliquid-precompiles-f0b6025bb4a3",
+        "title": "The Definitive Guide to Hyperliquid Precompiles",
+        "info": "In-depth technical guide covering precompile implementation, event-based L1 actions, integration patterns, limitations, code examples, and architectural considerations for HyperEVM-HyperCore integration"
+      }
+    }
+  }
+}
