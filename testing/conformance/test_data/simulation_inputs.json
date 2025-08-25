@@ -1,0 +1,61 @@
+{
+  "basic_transactions": [
+    {
+      "id": "tx_001",
+      "description": "Simple ETH transfer",
+      "transaction": {
+        "to": "0x742d35Cc6Bb23D8B09F1fD24D4C8AE3c87A86cF0",
+        "value": "1000000000000000000",
+        "gasLimit": "21000",
+        "gasPrice": "20000000000"
+      },
+      "network": "ethereum",
+      "blockNumber": "latest"
+    },
+    {
+      "id": "tx_002",
+      "description": "ERC-20 token transfer",
+      "transaction": {
+        "to": "0xA0b86a33E6417F8E6A1F7B8e1d7B5F1F3B6E7D8A",
+        "value": "0",
+        "data": "0xa9059cbb000000000000000000000000742d35cc6bb23d8b09f1fd24d4c8ae3c87a86cf00000000000000000000000000000000000000000000000000de0b6b3a7640000",
+        "gasLimit": "60000"
+      },
+      "network": "ethereum",
+      "blockNumber": "latest"
+    },
+    {
+      "id": "tx_003",
+      "description": "Contract deployment",
+      "transaction": {
+        "data": "0x608060405234801561001057600080fd5b50336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555061023e806100606000396000f3fe",
+        "gasLimit": "500000"
+      },
+      "network": "ethereum",
+      "blockNumber": "latest"
+    }
+  ],
+  "complex_scenarios": [
+    {
+      "id": "complex_001",
+      "description": "Multi-hop DEX swap",
+      "transaction": {
+        "to": "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D",
+        "value": "1000000000000000000",
+        "data": "0x791ac947000000000000000000000000000000000000000000000000000000000000008000000000000000000000000000000000000000000000000000000000000000c0",
+        "gasLimit": "200000"
+      },
+      "network": "ethereum",
+      "blockNumber": "latest"
+    }
+  ],
+  "stress_test_scenarios": [
+    {
+      "id": "stress_001",
+      "description": "Large batch simulation",
+      "transactions": "__GENERATE_100_TRANSACTIONS__",
+      "network": "ethereum",
+      "blockNumber": "latest"
+    }
+  ]
+}

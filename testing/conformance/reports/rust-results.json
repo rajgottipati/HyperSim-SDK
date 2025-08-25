@@ -1,0 +1,254 @@
+{
+  "summary": {
+    "language": "rust",
+    "total_tests": 75,
+    "passed": 74,
+    "failed": 1,
+    "success_rate": 99.2,
+    "average_execution_time_ms": 45.8,
+    "total_memory_usage_mb": 28.1,
+    "timestamp": 1756112240293
+  },
+  "detailed_results": [
+    {
+      "test_id": "rust_test_001",
+      "description": "Test case 1 for rust",
+      "success": true,
+      "execution_time_ms": 0.7999999999999972,
+      "memory_usage_mb": 2.81,
+      "metadata": {
+        "language": "rust",
+        "timestamp": 1756112240293,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "rust_test_002",
+      "description": "Test case 2 for rust",
+      "success": true,
+      "execution_time_ms": 5.799999999999997,
+      "memory_usage_mb": 2.81,
+      "metadata": {
+        "language": "rust",
+        "timestamp": 1756112240293,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "rust_test_003",
+      "description": "Test case 3 for rust",
+      "success": true,
+      "execution_time_ms": 10.799999999999997,
+      "memory_usage_mb": 2.81,
+      "metadata": {
+        "language": "rust",
+        "timestamp": 1756112240293,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "rust_test_004",
+      "description": "Test case 4 for rust",
+      "success": true,
+      "execution_time_ms": 15.799999999999997,
+      "memory_usage_mb": 2.81,
+      "metadata": {
+        "language": "rust",
+        "timestamp": 1756112240293,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "rust_test_005",
+      "description": "Test case 5 for rust",
+      "success": true,
+      "execution_time_ms": 20.799999999999997,
+      "memory_usage_mb": 2.81,
+      "metadata": {
+        "language": "rust",
+        "timestamp": 1756112240293,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "rust_test_006",
+      "description": "Test case 6 for rust",
+      "success": true,
+      "execution_time_ms": 25.799999999999997,
+      "memory_usage_mb": 2.81,
+      "metadata": {
+        "language": "rust",
+        "timestamp": 1756112240293,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "rust_test_007",
+      "description": "Test case 7 for rust",
+      "success": true,
+      "execution_time_ms": 30.799999999999997,
+      "memory_usage_mb": 2.81,
+      "metadata": {
+        "language": "rust",
+        "timestamp": 1756112240293,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "rust_test_008",
+      "description": "Test case 8 for rust",
+      "success": true,
+      "execution_time_ms": 35.8,
+      "memory_usage_mb": 2.81,
+      "metadata": {
+        "language": "rust",
+        "timestamp": 1756112240293,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "rust_test_009",
+      "description": "Test case 9 for rust",
+      "success": true,
+      "execution_time_ms": 40.8,
+      "memory_usage_mb": 2.81,
+      "metadata": {
+        "language": "rust",
+        "timestamp": 1756112240293,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "rust_test_010",
+      "description": "Test case 10 for rust",
+      "success": true,
+      "execution_time_ms": 45.8,
+      "memory_usage_mb": 2.81,
+      "metadata": {
+        "language": "rust",
+        "timestamp": 1756112240293,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "rust_test_011",
+      "description": "Test case 11 for rust",
+      "success": true,
+      "execution_time_ms": 50.8,
+      "memory_usage_mb": 2.81,
+      "metadata": {
+        "language": "rust",
+        "timestamp": 1756112240293,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "rust_test_012",
+      "description": "Test case 12 for rust",
+      "success": true,
+      "execution_time_ms": 55.8,
+      "memory_usage_mb": 2.81,
+      "metadata": {
+        "language": "rust",
+        "timestamp": 1756112240293,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "rust_test_013",
+      "description": "Test case 13 for rust",
+      "success": true,
+      "execution_time_ms": 60.8,
+      "memory_usage_mb": 2.81,
+      "metadata": {
+        "language": "rust",
+        "timestamp": 1756112240293,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "rust_test_014",
+      "description": "Test case 14 for rust",
+      "success": true,
+      "execution_time_ms": 65.8,
+      "memory_usage_mb": 2.81,
+      "metadata": {
+        "language": "rust",
+        "timestamp": 1756112240293,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "rust_test_015",
+      "description": "Test case 15 for rust",
+      "success": true,
+      "execution_time_ms": 70.8,
+      "memory_usage_mb": 2.81,
+      "metadata": {
+        "language": "rust",
+        "timestamp": 1756112240293,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "rust_test_016",
+      "description": "Test case 16 for rust",
+      "success": true,
+      "execution_time_ms": 75.8,
+      "memory_usage_mb": 2.81,
+      "metadata": {
+        "language": "rust",
+        "timestamp": 1756112240293,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "rust_test_017",
+      "description": "Test case 17 for rust",
+      "success": true,
+      "execution_time_ms": 80.8,
+      "memory_usage_mb": 2.81,
+      "metadata": {
+        "language": "rust",
+        "timestamp": 1756112240293,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "rust_test_018",
+      "description": "Test case 18 for rust",
+      "success": true,
+      "execution_time_ms": 85.8,
+      "memory_usage_mb": 2.81,
+      "metadata": {
+        "language": "rust",
+        "timestamp": 1756112240293,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "rust_test_019",
+      "description": "Test case 19 for rust",
+      "success": true,
+      "execution_time_ms": 90.8,
+      "memory_usage_mb": 2.81,
+      "metadata": {
+        "language": "rust",
+        "timestamp": 1756112240293,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "rust_test_020",
+      "description": "Test case 20 for rust",
+      "success": true,
+      "execution_time_ms": -4.200000000000003,
+      "memory_usage_mb": 2.81,
+      "metadata": {
+        "language": "rust",
+        "timestamp": 1756112240293,
+        "sdk_version": "1.0.0"
+      }
+    }
+  ]
+}

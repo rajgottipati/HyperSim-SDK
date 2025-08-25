@@ -1,0 +1,92 @@
+{
+  "name": "hypersim-sdk-docs-config",
+  "description": "Sample configuration for HyperSim SDK documentation generator",
+  "openai": {
+    "apiKey": "your-openai-api-key-here",
+    "model": "gpt-4",
+    "temperature": 0.1,
+    "maxTokens": 4000
+  },
+  "sources": {
+    "typescript": [
+      "./src",
+      "./hypersim-sdk/src"
+    ],
+    "python": [
+      "./sdks/python/hypersim_sdk"
+    ],
+    "rust": [
+      "./sdks/rust/src"
+    ],
+    "go": [
+      "./sdks/go"
+    ],
+    "java": [
+      "./sdks/java/src"
+    ]
+  },
+  "output": {
+    "directory": "./generated-docs",
+    "formats": [
+      "markdown",
+      "html",
+      "json"
+    ],
+    "liveExamples": true
+  },
+  "generation": {
+    "apiReference": true,
+    "tutorials": true,
+    "examples": true,
+    "troubleshooting": true,
+    "comparisons": true,
+    "maxComplexity": 5
+  },
+  "languages": {
+    "typescript": {
+      "enabled": true,
+      "priority": 1,
+      "customInstructions": "Focus on type safety and async patterns"
+    },
+    "python": {
+      "enabled": true,
+      "priority": 2,
+      "customInstructions": "Emphasize Pythonic patterns and asyncio usage"
+    },
+    "rust": {
+      "enabled": true,
+      "priority": 3,
+      "customInstructions": "Highlight memory safety and zero-cost abstractions"
+    },
+    "go": {
+      "enabled": true,
+      "priority": 4,
+      "customInstructions": "Focus on goroutines, channels, and simplicity"
+    },
+    "java": {
+      "enabled": true,
+      "priority": 5,
+      "customInstructions": "Emphasize enterprise patterns and Spring integration"
+    }
+  },
+  "templates": {
+    "directory": "./templates",
+    "variables": {
+      "projectName": "HyperSim SDK",
+      "version": "1.0.0",
+      "author": "HyperSim Team",
+      "website": "https://hypersim.dev",
+      "repository": "https://github.com/hypersim/hypersim-sdk",
+      "support": "https://discord.gg/hypersim"
+    }
+  },
+  "debug": false,
+  "verbose": false,
+  "_comments": {
+    "openai": "Get your API key from https://platform.openai.com/api-keys",
+    "sources": "Adjust paths based on your project structure",
+    "formats": "Available: markdown, html, json, pdf (planned)",
+    "maxComplexity": "1=Beginner, 2=Easy, 3=Intermediate, 4=Advanced, 5=Expert",
+    "priority": "Lower numbers = higher priority in documentation"
+  }
+}

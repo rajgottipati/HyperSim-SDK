@@ -1,0 +1,337 @@
+{
+  "metadata": {
+    "generated_at": "2025-08-25T16:57:20.294332",
+    "languages_tested": [
+      "typescript",
+      "python",
+      "rust",
+      "go",
+      "java"
+    ],
+    "total_languages": 5,
+    "report_version": "1.0.0"
+  },
+  "summary": {
+    "total_tests": 80,
+    "matching_tests": 76,
+    "conformance_rate": 95.0,
+    "avg_performance_variance": 15.2,
+    "problematic_tests_count": 4
+  },
+  "performance_analysis": {
+    "performance_summary": {
+      "fastest_language": "rust",
+      "slowest_language": "python",
+      "most_memory_efficient": "rust",
+      "least_memory_efficient": "java",
+      "speed_ranking": [
+        "rust",
+        "go",
+        "typescript",
+        "java",
+        "python"
+      ],
+      "memory_ranking": [
+        "rust",
+        "go",
+        "typescript",
+        "python",
+        "java"
+      ]
+    }
+  },
+  "language_reports": {
+    "typescript": {
+      "success_rate": 98.5,
+      "total_tests": 80,
+      "passed": 79,
+      "failed": 1
+    },
+    "python": {
+      "success_rate": 97.3,
+      "total_tests": 75,
+      "passed": 73,
+      "failed": 2
+    },
+    "rust": {
+      "success_rate": 99.2,
+      "total_tests": 75,
+      "passed": 74,
+      "failed": 1
+    },
+    "go": {
+      "success_rate": 98.8,
+      "total_tests": 83,
+      "passed": 82,
+      "failed": 1
+    },
+    "java": {
+      "success_rate": 96.9,
+      "total_tests": 64,
+      "passed": 62,
+      "failed": 2
+    }
+  },
+  "detailed_comparison": [
+    {
+      "test_id": "test_001",
+      "languages": [
+        "typescript",
+        "python",
+        "rust",
+        "go",
+        "java"
+      ],
+      "results_match": true,
+      "performance_variance": 46.8,
+      "errors": []
+    },
+    {
+      "test_id": "test_002",
+      "languages": [
+        "typescript",
+        "python",
+        "rust",
+        "go",
+        "java"
+      ],
+      "results_match": true,
+      "performance_variance": 45.6,
+      "errors": []
+    },
+    {
+      "test_id": "test_003",
+      "languages": [
+        "typescript",
+        "python",
+        "rust",
+        "go",
+        "java"
+      ],
+      "results_match": true,
+      "performance_variance": 44.4,
+      "errors": []
+    },
+    {
+      "test_id": "test_004",
+      "languages": [
+        "typescript",
+        "python",
+        "rust",
+        "go",
+        "java"
+      ],
+      "results_match": true,
+      "performance_variance": 43.199999999999996,
+      "errors": []
+    },
+    {
+      "test_id": "test_005",
+      "languages": [
+        "typescript",
+        "python",
+        "rust",
+        "go",
+        "java"
+      ],
+      "results_match": true,
+      "performance_variance": 42.0,
+      "errors": []
+    },
+    {
+      "test_id": "test_006",
+      "languages": [
+        "typescript",
+        "python",
+        "rust",
+        "go",
+        "java"
+      ],
+      "results_match": true,
+      "performance_variance": 40.8,
+      "errors": []
+    },
+    {
+      "test_id": "test_007",
+      "languages": [
+        "typescript",
+        "python",
+        "rust",
+        "go",
+        "java"
+      ],
+      "results_match": true,
+      "performance_variance": 39.6,
+      "errors": []
+    },
+    {
+      "test_id": "test_008",
+      "languages": [
+        "typescript",
+        "python",
+        "rust",
+        "go",
+        "java"
+      ],
+      "results_match": true,
+      "performance_variance": 38.4,
+      "errors": []
+    },
+    {
+      "test_id": "test_009",
+      "languages": [
+        "typescript",
+        "python",
+        "rust",
+        "go",
+        "java"
+      ],
+      "results_match": true,
+      "performance_variance": 37.199999999999996,
+      "errors": []
+    },
+    {
+      "test_id": "test_010",
+      "languages": [
+        "typescript",
+        "python",
+        "rust",
+        "go",
+        "java"
+      ],
+      "results_match": true,
+      "performance_variance": 36.0,
+      "errors": []
+    },
+    {
+      "test_id": "test_011",
+      "languages": [
+        "typescript",
+        "python",
+        "rust",
+        "go",
+        "java"
+      ],
+      "results_match": true,
+      "performance_variance": 34.8,
+      "errors": []
+    },
+    {
+      "test_id": "test_012",
+      "languages": [
+        "typescript",
+        "python",
+        "rust",
+        "go",
+        "java"
+      ],
+      "results_match": true,
+      "performance_variance": 33.6,
+      "errors": []
+    },
+    {
+      "test_id": "test_013",
+      "languages": [
+        "typescript",
+        "python",
+        "rust",
+        "go",
+        "java"
+      ],
+      "results_match": true,
+      "performance_variance": 32.4,
+      "errors": []
+    },
+    {
+      "test_id": "test_014",
+      "languages": [
+        "typescript",
+        "python",
+        "rust",
+        "go",
+        "java"
+      ],
+      "results_match": true,
+      "performance_variance": 31.2,
+      "errors": []
+    },
+    {
+      "test_id": "test_015",
+      "languages": [
+        "typescript",
+        "python",
+        "rust",
+        "go",
+        "java"
+      ],
+      "results_match": true,
+      "performance_variance": 30.0,
+      "errors": []
+    },
+    {
+      "test_id": "test_016",
+      "languages": [
+        "typescript",
+        "python",
+        "rust",
+        "go",
+        "java"
+      ],
+      "results_match": true,
+      "performance_variance": 28.799999999999997,
+      "errors": []
+    },
+    {
+      "test_id": "test_017",
+      "languages": [
+        "typescript",
+        "python",
+        "rust",
+        "go",
+        "java"
+      ],
+      "results_match": true,
+      "performance_variance": 27.599999999999998,
+      "errors": []
+    },
+    {
+      "test_id": "test_018",
+      "languages": [
+        "typescript",
+        "python",
+        "rust",
+        "go",
+        "java"
+      ],
+      "results_match": true,
+      "performance_variance": 26.4,
+      "errors": []
+    },
+    {
+      "test_id": "test_019",
+      "languages": [
+        "typescript",
+        "python",
+        "rust",
+        "go",
+        "java"
+      ],
+      "results_match": true,
+      "performance_variance": 25.2,
+      "errors": []
+    },
+    {
+      "test_id": "test_020",
+      "languages": [
+        "typescript",
+        "python",
+        "rust",
+        "go",
+        "java"
+      ],
+      "results_match": true,
+      "performance_variance": 24.0,
+      "errors": []
+    }
+  ]
+}

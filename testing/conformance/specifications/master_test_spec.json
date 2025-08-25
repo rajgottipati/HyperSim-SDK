@@ -1,0 +1,248 @@
+{
+  "version": "1.0.0",
+  "description": "Master test specification for HyperSim SDK cross-language conformance testing",
+  "test_categories": {
+    "core_sdk": {
+      "description": "Core SDK initialization and configuration tests",
+      "operations": [
+        {
+          "name": "sdk_initialization",
+          "description": "Test SDK initialization with various configurations",
+          "test_cases": [
+            {
+              "id": "init_001",
+              "description": "Initialize SDK with default configuration",
+              "input": {
+                "config": {
+                  "hyperCore": {
+                    "url": "https://api.hypersim.io/hypercore",
+                    "apiKey": "test_key_123"
+                  },
+                  "hyperEVM": {
+                    "url": "https://api.hypersim.io/hyperevm",
+                    "apiKey": "test_key_456"
+                  }
+                }
+              },
+              "expected_output": {
+                "success": true,
+                "sdk_initialized": true,
+                "clients_ready": true
+              },
+              "performance_threshold_ms": 100
+            },
+            {
+              "id": "init_002",
+              "description": "Initialize SDK with custom plugins",
+              "input": {
+                "config": {
+                  "hyperCore": {
+                    "url": "https://api.hypersim.io/hypercore",
+                    "apiKey": "test_key_123"
+                  },
+                  "plugins": [
+                    {
+                      "name": "MetricsPlugin",
+                      "config": {
+                        "enabled": true
+                      }
+                    }
+                  ]
+                }
+              },
+              "expected_output": {
+                "success": true,
+                "sdk_initialized": true,
+                "plugins_loaded": 1
+              },
+              "performance_threshold_ms": 150
+            }
+          ]
+        }
+      ]
+    },
+    "simulation": {
+      "description": "Transaction simulation operations",
+      "operations": [
+        {
+          "name": "simulate_transaction",
+          "description": "Test transaction simulation functionality",
+          "test_cases": [
+            {
+              "id": "sim_001",
+              "description": "Simulate basic ERC-20 transfer",
+              "input": {
+                "transaction": {
+                  "to": "0x742d35Cc6Bb23D8B09F1fD24D4C8AE3c87A86cF0",
+                  "value": "1000000000000000000",
+                  "data": "0xa9059cbb000000000000000000000000742d35cc6bb23d8b09f1fd24d4c8ae3c87a86cf00000000000000000000000000000000000000000000000000de0b6b3a7640000",
+                  "gasLimit": "21000"
+                },
+                "network": "ethereum",
+                "blockNumber": "latest"
+              },
+              "expected_output": {
+                "success": true,
+                "gasUsed": 21000,
+                "status": "success",
+                "logs": [],
+                "returnValue": "0x"
+              },
+              "performance_threshold_ms": 500
+            },
+            {
+              "id": "sim_002",
+              "description": "Simulate contract deployment",
+              "input": {
+                "transaction": {
+                  "data": "0x608060405234801561001057600080fd5b50336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555061023e806100606000396000f3fe",
+                  "gasLimit": "500000"
+                },
+                "network": "ethereum",
+                "blockNumber": "latest"
+              },
+              "expected_output": {
+                "success": true,
+                "contractAddress": "string",
+                "gasUsed": "number",
+                "status": "success"
+              },
+              "performance_threshold_ms": 1000
+            }
+          ]
+        }
+      ]
+    },
+    "ai_analysis": {
+      "description": "AI-powered analysis operations",
+      "operations": [
+        {
+          "name": "analyze_transaction",
+          "description": "Test AI transaction analysis",
+          "test_cases": [
+            {
+              "id": "ai_001",
+              "description": "Analyze ERC-20 transfer transaction",
+              "input": {
+                "transaction": {
+                  "hash": "0x123456789abcdef",
+                  "to": "0x742d35Cc6Bb23D8B09F1fD24D4C8AE3c87A86cF0",
+                  "value": "1000000000000000000",
+                  "data": "0xa9059cbb"
+                },
+                "analysisType": "risk"
+              },
+              "expected_output": {
+                "success": true,
+                "analysis": {
+                  "riskScore": "number",
+                  "classification": "string",
+                  "insights": "array"
+                }
+              },
+              "performance_threshold_ms": 2000
+            }
+          ]
+        }
+      ]
+    },
+    "websocket": {
+      "description": "WebSocket streaming operations",
+      "operations": [
+        {
+          "name": "connect_websocket",
+          "description": "Test WebSocket connection establishment",
+          "test_cases": [
+            {
+              "id": "ws_001",
+              "description": "Connect to WebSocket stream",
+              "input": {
+                "url": "wss://stream.hypersim.io/ws",
+                "subscriptions": ["blocks", "transactions"]
+              },
+              "expected_output": {
+                "success": true,
+                "connected": true,
+                "subscriptions_active": 2
+              },
+              "performance_threshold_ms": 3000
+            }
+          ]
+        }
+      ]
+    },
+    "error_handling": {
+      "description": "Error handling consistency tests",
+      "operations": [
+        {
+          "name": "handle_invalid_input",
+          "description": "Test error handling for invalid inputs",
+          "test_cases": [
+            {
+              "id": "err_001",
+              "description": "Handle invalid transaction data",
+              "input": {
+                "transaction": {
+                  "to": "invalid_address",
+                  "value": "not_a_number"
+                }
+              },
+              "expected_output": {
+                "success": false,
+                "error": {
+                  "code": "INVALID_INPUT",
+                  "message": "string",
+                  "details": "object"
+                }
+              }
+            },
+            {
+              "id": "err_002",
+              "description": "Handle network timeout",
+              "input": {
+                "transaction": {
+                  "to": "0x742d35Cc6Bb23D8B09F1fD24D4C8AE3c87A86cF0",
+                  "value": "1000000000000000000"
+                },
+                "timeout": 1
+              },
+              "expected_output": {
+                "success": false,
+                "error": {
+                  "code": "NETWORK_TIMEOUT",
+                  "message": "string"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "cross_language_requirements": {
+    "response_format_consistency": {
+      "description": "All SDKs must return responses in identical JSON structure",
+      "required_fields": ["success", "data", "error", "metadata"]
+    },
+    "error_code_consistency": {
+      "description": "All SDKs must use identical error codes and messages",
+      "standard_error_codes": [
+        "INVALID_INPUT",
+        "NETWORK_TIMEOUT",
+        "AUTHENTICATION_FAILED",
+        "RATE_LIMIT_EXCEEDED",
+        "INTERNAL_ERROR"
+      ]
+    },
+    "performance_requirements": {
+      "description": "Performance thresholds that all SDKs must meet",
+      "max_deviation_percent": 20,
+      "baseline_operations": {
+        "sdk_initialization": 100,
+        "simple_simulation": 500,
+        "ai_analysis": 2000,
+        "websocket_connection": 3000
+      }
+    }
+  }
+}

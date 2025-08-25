@@ -1,0 +1,106 @@
+{
+  "simulation_results": {
+    "tx_001": {
+      "success": true,
+      "data": {
+        "gasUsed": 21000,
+        "status": "success",
+        "logs": [],
+        "returnValue": "0x",
+        "balanceChanges": [
+          {
+            "address": "0x742d35Cc6Bb23D8B09F1fD24D4C8AE3c87A86cF0",
+            "before": "0",
+            "after": "1000000000000000000"
+          }
+        ]
+      },
+      "error": null,
+      "metadata": {
+        "executionTime": "number",
+        "blockNumber": "number",
+        "timestamp": "number"
+      }
+    },
+    "tx_002": {
+      "success": true,
+      "data": {
+        "gasUsed": 46916,
+        "status": "success",
+        "logs": [
+          {
+            "address": "0xA0b86a33E6417F8E6A1F7B8e1d7B5F1F3B6E7D8A",
+            "topics": [
+              "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef"
+            ],
+            "data": "0x0000000000000000000000000000000000000000000000000de0b6b3a7640000"
+          }
+        ],
+        "returnValue": "0x0000000000000000000000000000000000000000000000000000000000000001"
+      },
+      "error": null,
+      "metadata": {
+        "executionTime": "number",
+        "blockNumber": "number",
+        "timestamp": "number"
+      }
+    }
+  },
+  "ai_analysis_results": {
+    "ai_001": {
+      "success": true,
+      "data": {
+        "analysis": {
+          "riskScore": 0.2,
+          "classification": "low_risk",
+          "insights": [
+            "Standard ERC-20 transfer",
+            "No suspicious patterns detected",
+            "Recipient address has normal activity"
+          ],
+          "recommendations": [
+            "Transaction appears safe to execute"
+          ]
+        }
+      },
+      "error": null,
+      "metadata": {
+        "analysisTime": "number",
+        "modelVersion": "string"
+      }
+    }
+  },
+  "error_scenarios": {
+    "err_001": {
+      "success": false,
+      "data": null,
+      "error": {
+        "code": "INVALID_INPUT",
+        "message": "Invalid transaction parameters",
+        "details": {
+          "field": "to",
+          "value": "invalid_address",
+          "reason": "Invalid Ethereum address format"
+        }
+      },
+      "metadata": {
+        "timestamp": "number"
+      }
+    },
+    "err_002": {
+      "success": false,
+      "data": null,
+      "error": {
+        "code": "NETWORK_TIMEOUT",
+        "message": "Request timed out after 1ms",
+        "details": {
+          "timeout": 1,
+          "operation": "simulate_transaction"
+        }
+      },
+      "metadata": {
+        "timestamp": "number"
+      }
+    }
+  }
+}

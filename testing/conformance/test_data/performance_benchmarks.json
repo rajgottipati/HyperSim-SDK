@@ -1,0 +1,83 @@
+{
+  "baseline_metrics": {
+    "description": "Performance baseline metrics for cross-language comparison",
+    "measurement_units": {
+      "time": "milliseconds",
+      "memory": "bytes",
+      "cpu": "percentage"
+    },
+    "operations": {
+      "sdk_initialization": {
+        "max_time_ms": 100,
+        "max_memory_mb": 50,
+        "acceptable_variance_percent": 20
+      },
+      "simple_simulation": {
+        "max_time_ms": 500,
+        "max_memory_mb": 100,
+        "acceptable_variance_percent": 30
+      },
+      "complex_simulation": {
+        "max_time_ms": 2000,
+        "max_memory_mb": 200,
+        "acceptable_variance_percent": 40
+      },
+      "ai_analysis": {
+        "max_time_ms": 3000,
+        "max_memory_mb": 300,
+        "acceptable_variance_percent": 50
+      },
+      "websocket_connection": {
+        "max_time_ms": 1000,
+        "max_memory_mb": 50,
+        "acceptable_variance_percent": 25
+      },
+      "batch_processing": {
+        "max_time_ms": 10000,
+        "max_memory_mb": 500,
+        "acceptable_variance_percent": 60
+      }
+    }
+  },
+  "load_test_scenarios": [
+    {
+      "name": "concurrent_simulations",
+      "description": "Test performance under concurrent simulation load",
+      "parameters": {
+        "concurrent_requests": [1, 5, 10, 25, 50],
+        "request_duration_seconds": 30,
+        "ramp_up_seconds": 10
+      },
+      "success_criteria": {
+        "max_response_time_ms": 5000,
+        "min_success_rate_percent": 95,
+        "max_error_rate_percent": 5
+      }
+    },
+    {
+      "name": "memory_stress_test",
+      "description": "Test memory usage under sustained load",
+      "parameters": {
+        "operations_per_second": 10,
+        "test_duration_minutes": 5,
+        "operation_types": ["simulation", "ai_analysis"]
+      },
+      "success_criteria": {
+        "max_memory_growth_mb": 100,
+        "max_memory_leaks": 0
+      }
+    }
+  ],
+  "comparison_matrix": {
+    "languages": ["typescript", "python", "rust", "go", "java"],
+    "metrics_to_compare": [
+      "execution_time",
+      "memory_usage",
+      "cpu_usage",
+      "throughput",
+      "latency_p50",
+      "latency_p95",
+      "latency_p99"
+    ]
+  }
+}

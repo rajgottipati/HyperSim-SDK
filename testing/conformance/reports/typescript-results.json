@@ -1,0 +1,254 @@
+{
+  "summary": {
+    "language": "typescript",
+    "total_tests": 80,
+    "passed": 79,
+    "failed": 1,
+    "success_rate": 98.5,
+    "average_execution_time_ms": 85.2,
+    "total_memory_usage_mb": 45.8,
+    "timestamp": 1756112240292
+  },
+  "detailed_results": [
+    {
+      "test_id": "typescript_test_001",
+      "description": "Test case 1 for typescript",
+      "success": true,
+      "execution_time_ms": 40.2,
+      "memory_usage_mb": 4.58,
+      "metadata": {
+        "language": "typescript",
+        "timestamp": 1756112240292,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "typescript_test_002",
+      "description": "Test case 2 for typescript",
+      "success": true,
+      "execution_time_ms": 45.2,
+      "memory_usage_mb": 4.58,
+      "metadata": {
+        "language": "typescript",
+        "timestamp": 1756112240292,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "typescript_test_003",
+      "description": "Test case 3 for typescript",
+      "success": true,
+      "execution_time_ms": 50.2,
+      "memory_usage_mb": 4.58,
+      "metadata": {
+        "language": "typescript",
+        "timestamp": 1756112240292,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "typescript_test_004",
+      "description": "Test case 4 for typescript",
+      "success": true,
+      "execution_time_ms": 55.2,
+      "memory_usage_mb": 4.58,
+      "metadata": {
+        "language": "typescript",
+        "timestamp": 1756112240292,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "typescript_test_005",
+      "description": "Test case 5 for typescript",
+      "success": true,
+      "execution_time_ms": 60.2,
+      "memory_usage_mb": 4.58,
+      "metadata": {
+        "language": "typescript",
+        "timestamp": 1756112240292,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "typescript_test_006",
+      "description": "Test case 6 for typescript",
+      "success": true,
+      "execution_time_ms": 65.2,
+      "memory_usage_mb": 4.58,
+      "metadata": {
+        "language": "typescript",
+        "timestamp": 1756112240292,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "typescript_test_007",
+      "description": "Test case 7 for typescript",
+      "success": true,
+      "execution_time_ms": 70.2,
+      "memory_usage_mb": 4.58,
+      "metadata": {
+        "language": "typescript",
+        "timestamp": 1756112240292,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "typescript_test_008",
+      "description": "Test case 8 for typescript",
+      "success": true,
+      "execution_time_ms": 75.2,
+      "memory_usage_mb": 4.58,
+      "metadata": {
+        "language": "typescript",
+        "timestamp": 1756112240292,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "typescript_test_009",
+      "description": "Test case 9 for typescript",
+      "success": true,
+      "execution_time_ms": 80.2,
+      "memory_usage_mb": 4.58,
+      "metadata": {
+        "language": "typescript",
+        "timestamp": 1756112240292,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "typescript_test_010",
+      "description": "Test case 10 for typescript",
+      "success": true,
+      "execution_time_ms": 85.2,
+      "memory_usage_mb": 4.58,
+      "metadata": {
+        "language": "typescript",
+        "timestamp": 1756112240292,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "typescript_test_011",
+      "description": "Test case 11 for typescript",
+      "success": true,
+      "execution_time_ms": 90.2,
+      "memory_usage_mb": 4.58,
+      "metadata": {
+        "language": "typescript",
+        "timestamp": 1756112240292,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "typescript_test_012",
+      "description": "Test case 12 for typescript",
+      "success": true,
+      "execution_time_ms": 95.2,
+      "memory_usage_mb": 4.58,
+      "metadata": {
+        "language": "typescript",
+        "timestamp": 1756112240292,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "typescript_test_013",
+      "description": "Test case 13 for typescript",
+      "success": true,
+      "execution_time_ms": 100.2,
+      "memory_usage_mb": 4.58,
+      "metadata": {
+        "language": "typescript",
+        "timestamp": 1756112240292,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "typescript_test_014",
+      "description": "Test case 14 for typescript",
+      "success": true,
+      "execution_time_ms": 105.2,
+      "memory_usage_mb": 4.58,
+      "metadata": {
+        "language": "typescript",
+        "timestamp": 1756112240292,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "typescript_test_015",
+      "description": "Test case 15 for typescript",
+      "success": true,
+      "execution_time_ms": 110.2,
+      "memory_usage_mb": 4.58,
+      "metadata": {
+        "language": "typescript",
+        "timestamp": 1756112240292,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "typescript_test_016",
+      "description": "Test case 16 for typescript",
+      "success": true,
+      "execution_time_ms": 115.2,
+      "memory_usage_mb": 4.58,
+      "metadata": {
+        "language": "typescript",
+        "timestamp": 1756112240292,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "typescript_test_017",
+      "description": "Test case 17 for typescript",
+      "success": true,
+      "execution_time_ms": 120.2,
+      "memory_usage_mb": 4.58,
+      "metadata": {
+        "language": "typescript",
+        "timestamp": 1756112240292,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "typescript_test_018",
+      "description": "Test case 18 for typescript",
+      "success": true,
+      "execution_time_ms": 125.2,
+      "memory_usage_mb": 4.58,
+      "metadata": {
+        "language": "typescript",
+        "timestamp": 1756112240292,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "typescript_test_019",
+      "description": "Test case 19 for typescript",
+      "success": true,
+      "execution_time_ms": 130.2,
+      "memory_usage_mb": 4.58,
+      "metadata": {
+        "language": "typescript",
+        "timestamp": 1756112240292,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "typescript_test_020",
+      "description": "Test case 20 for typescript",
+      "success": true,
+      "execution_time_ms": 35.2,
+      "memory_usage_mb": 4.58,
+      "metadata": {
+        "language": "typescript",
+        "timestamp": 1756112240292,
+        "sdk_version": "1.0.0"
+      }
+    }
+  ]
+}

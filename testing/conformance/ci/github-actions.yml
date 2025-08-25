@@ -1,0 +1,282 @@
+name: HyperSim SDK Cross-Language Conformance Testing
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    # Run conformance tests daily at 2 AM UTC
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+    inputs:
+      languages:
+        description: 'Languages to test (comma-separated: typescript,python,rust,go,java)'
+        required: false
+        default: 'typescript,python,rust,go,java'
+      skip_integration:
+        description: 'Skip integration tests'
+        type: boolean
+        required: false
+        default: false
+      deploy_reports:
+        description: 'Deploy reports to GitHub Pages'
+        type: boolean
+        required: false
+        default: true
+
+env:
+  HYPERCORE_URL: ${{ secrets.HYPERCORE_URL || 'https://api.hypersim.io/hypercore' }}
+  HYPERCORE_API_KEY: ${{ secrets.HYPERCORE_API_KEY || 'test_key_123' }}
+  HYPEREVM_URL: ${{ secrets.HYPEREVM_URL || 'https://api.hypersim.io/hyperevm' }}
+  HYPEREVM_API_KEY: ${{ secrets.HYPEREVM_API_KEY || 'test_key_456' }}
+
+jobs:
+  conformance-test:
+    name: Cross-Language Conformance Testing
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    
+    strategy:
+      matrix:
+        include:
+          - name: "Full Suite"
+            languages: "typescript,python,rust,go,java"
+      fail-fast: false
+    
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        cache-dependency-path: '**/package-lock.json'
+    
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        cache: 'pip'
+    
+    - name: Setup Rust
+      uses: actions-rs/toolchain@v1
+      with:
+        toolchain: stable
+        profile: minimal
+        override: true
+    
+    - name: Setup Go
+      uses: actions/setup-go@v4
+      with:
+        go-version: '1.21'
+        cache: true
+    
+    - name: Setup Java
+      uses: actions/setup-java@v3
+      with:
+        distribution: 'temurin'
+        java-version: '11'
+        cache: 'maven'
+    
+    - name: Install Python Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pytest pytest-asyncio psutil dataclasses-json
+    
+    - name: Cache Rust Dependencies
+      uses: actions/cache@v3
+      with:
+        path: |
+          ~/.cargo/bin/
+          ~/.cargo/registry/index/
+          ~/.cargo/registry/cache/
+          ~/.cargo/git/db/
+          testing/conformance/runners/rust/target/
+        key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+    
+    - name: Create Reports Directory
+      run: mkdir -p testing/conformance/reports
+    
+    - name: Run TypeScript Conformance Tests
+      working-directory: testing/conformance/runners/typescript
+      run: |
+        npm ci
+        npm test
+      continue-on-error: true
+    
+    - name: Run Python Conformance Tests
+      working-directory: testing/conformance/runners/python
+      run: |
+        python conformance_runner.py
+      continue-on-error: true
+    
+    - name: Run Rust Conformance Tests
+      working-directory: testing/conformance/runners/rust
+      run: |
+        cargo run --release
+      continue-on-error: true
+    
+    - name: Run Go Conformance Tests
+      working-directory: testing/conformance/runners/go
+      run: |
+        go mod tidy
+        go run main.go
+      continue-on-error: true
+    
+    - name: Run Java Conformance Tests
+      working-directory: testing/conformance/runners/java
+      run: |
+        mvn clean compile exec:java -Dexec.mainClass="io.hypersim.conformance.ConformanceTestRunner" -q
+      continue-on-error: true
+    
+    - name: Run Integration Tests
+      if: ${{ !inputs.skip_integration }}
+      working-directory: testing/conformance
+      run: |
+        python integration/cross_language_tests.py --output reports/integration-report.json
+      continue-on-error: true
+    
+    - name: Compare Results
+      working-directory: testing/conformance
+      run: |
+        python scripts/compare_results.py --reports-dir reports --output reports/conformance-report.json --verbose
+      continue-on-error: true
+    
+    - name: Generate HTML Dashboard
+      working-directory: testing/conformance
+      run: |
+        python scripts/generate_html_report.py --reports-dir reports --output-dir reports
+      continue-on-error: true
+    
+    - name: Archive Test Reports
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: conformance-test-reports-${{ github.run_number }}
+        path: |
+          testing/conformance/reports/*.json
+          testing/conformance/reports/*.html
+          testing/conformance/reports/*.log
+        retention-days: 30
+    
+    - name: Extract Test Results
+      id: test-results
+      if: always()
+      run: |
+        cd testing/conformance/reports
+        
+        # Extract conformance rate if report exists
+        if [ -f "conformance-report.json" ]; then
+          CONFORMANCE_RATE=$(python -c "import json; data=json.load(open('conformance-report.json')); print(f\"{data['summary']['conformance_rate']:.1f}\")") || echo "N/A"
+          TOTAL_TESTS=$(python -c "import json; data=json.load(open('conformance-report.json')); print(data['summary']['total_tests'])") || echo "N/A"
+          MATCHING_TESTS=$(python -c "import json; data=json.load(open('conformance-report.json')); print(data['summary']['matching_tests'])") || echo "N/A"
+        else
+          CONFORMANCE_RATE="N/A"
+          TOTAL_TESTS="N/A"
+          MATCHING_TESTS="N/A"
+        fi
+        
+        # Count language reports
+        LANGUAGES_TESTED=$(ls -1 *-results.json 2>/dev/null | wc -l || echo "0")
+        
+        echo "conformance_rate=$CONFORMANCE_RATE" >> $GITHUB_OUTPUT
+        echo "total_tests=$TOTAL_TESTS" >> $GITHUB_OUTPUT
+        echo "matching_tests=$MATCHING_TESTS" >> $GITHUB_OUTPUT
+        echo "languages_tested=$LANGUAGES_TESTED" >> $GITHUB_OUTPUT
+        
+        # Determine status
+        if [ "$CONFORMANCE_RATE" != "N/A" ]; then
+          if (( $(echo "$CONFORMANCE_RATE >= 95" | bc -l 2>/dev/null || echo "0") )); then
+            echo "status=success" >> $GITHUB_OUTPUT
+            echo "status_emoji=🎉" >> $GITHUB_OUTPUT
+          elif (( $(echo "$CONFORMANCE_RATE >= 80" | bc -l 2>/dev/null || echo "0") )); then
+            echo "status=warning" >> $GITHUB_OUTPUT
+            echo "status_emoji=⚠️" >> $GITHUB_OUTPUT
+          else
+            echo "status=failure" >> $GITHUB_OUTPUT
+            echo "status_emoji=❌" >> $GITHUB_OUTPUT
+          fi
+        else
+          echo "status=error" >> $GITHUB_OUTPUT
+          echo "status_emoji=💥" >> $GITHUB_OUTPUT
+        fi
+    
+    - name: Deploy to GitHub Pages
+      if: ${{ inputs.deploy_reports && github.ref == 'refs/heads/main' }}
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: testing/conformance/reports
+        destination_dir: conformance-reports/${{ github.run_number }}
+    
+    - name: Update Status Badge
+      if: github.ref == 'refs/heads/main'
+      run: |
+        # Create a simple status badge JSON
+        STATUS="${{ steps.test-results.outputs.status }}"
+        RATE="${{ steps.test-results.outputs.conformance_rate }}"
+        
+        case "$STATUS" in
+          "success") COLOR="brightgreen" ;;
+          "warning") COLOR="yellow" ;;
+          "failure") COLOR="red" ;;
+          *) COLOR="lightgrey" ;;
+        esac
+        
+        # This would typically update a badge service or commit a status file
+        echo "Status: $STATUS, Rate: $RATE%, Color: $COLOR"
+    
+    - name: Comment PR with Results
+      if: github.event_name == 'pull_request'
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const conformanceRate = '${{ steps.test-results.outputs.conformance_rate }}';
+          const totalTests = '${{ steps.test-results.outputs.total_tests }}';
+          const matchingTests = '${{ steps.test-results.outputs.matching_tests }}';
+          const languagesTested = '${{ steps.test-results.outputs.languages_tested }}';
+          const status = '${{ steps.test-results.outputs.status }}';
+          const emoji = '${{ steps.test-results.outputs.status_emoji }}';
+          
+          const body = `## ${emoji} HyperSim SDK Conformance Test Results
+          
+          | Metric | Value |
+          |--------|-------|
+          | **API Conformance Rate** | ${conformanceRate}% |
+          | **Total Tests** | ${totalTests} |
+          | **Matching Tests** | ${matchingTests} |
+          | **Languages Tested** | ${languagesTested} |
+          | **Overall Status** | ${status.toUpperCase()} |
+          
+          ${conformanceRate !== 'N/A' && parseFloat(conformanceRate) >= 95 
+            ? '🎉 **Excellent!** All SDKs demonstrate high conformance.'
+            : conformanceRate !== 'N/A' && parseFloat(conformanceRate) >= 80
+            ? '✅ **Good!** SDKs show good conformance with minor discrepancies.'
+            : '⚠️ **Action Required!** Conformance issues detected.'}
+          
+          📊 [View detailed reports](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})
+          `;
+          
+          github.rest.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: body
+          });
+    
+    - name: Set Exit Code
+      if: always()
+      run: |
+        STATUS="${{ steps.test-results.outputs.status }}"
+        if [ "$STATUS" = "failure" ] || [ "$STATUS" = "error" ]; then
+          echo "❌ Conformance tests failed or had errors"
+          exit 1
+        else
+          echo "✅ Conformance tests completed successfully"
+          exit 0
+        fi

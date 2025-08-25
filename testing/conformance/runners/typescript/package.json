@@ -1,0 +1,26 @@
+{
+  "name": "hypersim-conformance-ts",
+  "version": "1.0.0",
+  "description": "TypeScript conformance test runner for HyperSim SDK",
+  "scripts": {
+    "test": "jest --config jest.config.js",
+    "test:performance": "node performance-runner.js",
+    "test:websocket": "node websocket-runner.js",
+    "test:integration": "node integration-runner.js",
+    "test:all": "npm run test && npm run test:performance && npm run test:websocket",
+    "generate-report": "node report-generator.js"
+  },
+  "dependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/node": "^18.15.0",
+    "@types/ws": "^8.5.0",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.1.0",
+    "typescript": "^5.0.0",
+    "ws": "^8.13.0",
+    "hypersim-sdk": "file:../../../hypersim-sdk"
+  },
+  "devDependencies": {
+    "@types/performance-observer": "^3.0.0"
+  }
+}

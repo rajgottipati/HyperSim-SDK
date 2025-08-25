@@ -1,0 +1,254 @@
+{
+  "summary": {
+    "language": "go",
+    "total_tests": 83,
+    "passed": 82,
+    "failed": 1,
+    "success_rate": 98.8,
+    "average_execution_time_ms": 52.3,
+    "total_memory_usage_mb": 31.2,
+    "timestamp": 1756112240293
+  },
+  "detailed_results": [
+    {
+      "test_id": "go_test_001",
+      "description": "Test case 1 for go",
+      "success": true,
+      "execution_time_ms": 7.299999999999997,
+      "memory_usage_mb": 3.12,
+      "metadata": {
+        "language": "go",
+        "timestamp": 1756112240293,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "go_test_002",
+      "description": "Test case 2 for go",
+      "success": true,
+      "execution_time_ms": 12.299999999999997,
+      "memory_usage_mb": 3.12,
+      "metadata": {
+        "language": "go",
+        "timestamp": 1756112240293,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "go_test_003",
+      "description": "Test case 3 for go",
+      "success": true,
+      "execution_time_ms": 17.299999999999997,
+      "memory_usage_mb": 3.12,
+      "metadata": {
+        "language": "go",
+        "timestamp": 1756112240293,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "go_test_004",
+      "description": "Test case 4 for go",
+      "success": true,
+      "execution_time_ms": 22.299999999999997,
+      "memory_usage_mb": 3.12,
+      "metadata": {
+        "language": "go",
+        "timestamp": 1756112240293,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "go_test_005",
+      "description": "Test case 5 for go",
+      "success": true,
+      "execution_time_ms": 27.299999999999997,
+      "memory_usage_mb": 3.12,
+      "metadata": {
+        "language": "go",
+        "timestamp": 1756112240293,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "go_test_006",
+      "description": "Test case 6 for go",
+      "success": true,
+      "execution_time_ms": 32.3,
+      "memory_usage_mb": 3.12,
+      "metadata": {
+        "language": "go",
+        "timestamp": 1756112240293,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "go_test_007",
+      "description": "Test case 7 for go",
+      "success": true,
+      "execution_time_ms": 37.3,
+      "memory_usage_mb": 3.12,
+      "metadata": {
+        "language": "go",
+        "timestamp": 1756112240293,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "go_test_008",
+      "description": "Test case 8 for go",
+      "success": true,
+      "execution_time_ms": 42.3,
+      "memory_usage_mb": 3.12,
+      "metadata": {
+        "language": "go",
+        "timestamp": 1756112240293,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "go_test_009",
+      "description": "Test case 9 for go",
+      "success": true,
+      "execution_time_ms": 47.3,
+      "memory_usage_mb": 3.12,
+      "metadata": {
+        "language": "go",
+        "timestamp": 1756112240293,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "go_test_010",
+      "description": "Test case 10 for go",
+      "success": true,
+      "execution_time_ms": 52.3,
+      "memory_usage_mb": 3.12,
+      "metadata": {
+        "language": "go",
+        "timestamp": 1756112240293,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "go_test_011",
+      "description": "Test case 11 for go",
+      "success": true,
+      "execution_time_ms": 57.3,
+      "memory_usage_mb": 3.12,
+      "metadata": {
+        "language": "go",
+        "timestamp": 1756112240293,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "go_test_012",
+      "description": "Test case 12 for go",
+      "success": true,
+      "execution_time_ms": 62.3,
+      "memory_usage_mb": 3.12,
+      "metadata": {
+        "language": "go",
+        "timestamp": 1756112240293,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "go_test_013",
+      "description": "Test case 13 for go",
+      "success": true,
+      "execution_time_ms": 67.3,
+      "memory_usage_mb": 3.12,
+      "metadata": {
+        "language": "go",
+        "timestamp": 1756112240293,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "go_test_014",
+      "description": "Test case 14 for go",
+      "success": true,
+      "execution_time_ms": 72.3,
+      "memory_usage_mb": 3.12,
+      "metadata": {
+        "language": "go",
+        "timestamp": 1756112240293,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "go_test_015",
+      "description": "Test case 15 for go",
+      "success": true,
+      "execution_time_ms": 77.3,
+      "memory_usage_mb": 3.12,
+      "metadata": {
+        "language": "go",
+        "timestamp": 1756112240293,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "go_test_016",
+      "description": "Test case 16 for go",
+      "success": true,
+      "execution_time_ms": 82.3,
+      "memory_usage_mb": 3.12,
+      "metadata": {
+        "language": "go",
+        "timestamp": 1756112240293,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "go_test_017",
+      "description": "Test case 17 for go",
+      "success": true,
+      "execution_time_ms": 87.3,
+      "memory_usage_mb": 3.12,
+      "metadata": {
+        "language": "go",
+        "timestamp": 1756112240293,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "go_test_018",
+      "description": "Test case 18 for go",
+      "success": true,
+      "execution_time_ms": 92.3,
+      "memory_usage_mb": 3.12,
+      "metadata": {
+        "language": "go",
+        "timestamp": 1756112240293,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "go_test_019",
+      "description": "Test case 19 for go",
+      "success": true,
+      "execution_time_ms": 97.3,
+      "memory_usage_mb": 3.12,
+      "metadata": {
+        "language": "go",
+        "timestamp": 1756112240293,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "go_test_020",
+      "description": "Test case 20 for go",
+      "success": true,
+      "execution_time_ms": 2.299999999999997,
+      "memory_usage_mb": 3.12,
+      "metadata": {
+        "language": "go",
+        "timestamp": 1756112240293,
+        "sdk_version": "1.0.0"
+      }
+    }
+  ]
+}

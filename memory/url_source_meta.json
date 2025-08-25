@@ -1,5 +1,5 @@
 {
-  "_source_id": 9,
+  "_source_id": 33,
   "sources": {
     "HyperCore HyperEVM Integration Analysis": {
       "https://hyperliquid-co.gitbook.io/wiki/architecture/hyperevm": {
@@ -64,6 +64,178 @@
         "url": "https://medium.com/@ambitlabs/the-not-so-definitive-guide-to-hyperliquid-precompiles-f0b6025bb4a3",
         "title": "The Definitive Guide to Hyperliquid Precompiles",
         "info": "In-depth technical guide covering precompile implementation, event-based L1 actions, integration patterns, limitations, code examples, and architectural considerations for HyperEVM-HyperCore integration"
+      }
+    },
+    "Stainless-Style SDK Generation and Modern SDK Architecture Patterns": {
+      "https://www.stainless.com/blog/announcing-the-stainless-sdk-generator": {
+        "id": 10,
+        "publisher": "Stainless",
+        "url": "https://www.stainless.com/blog/announcing-the-stainless-sdk-generator",
+        "title": "Announcing the Stainless SDK generator",
+        "info": "Official announcement of Stainless SDK generator with detailed explanation of their approach to automated SDK generation, including continuous updates, type safety, idiomatic code generation, and SDK Studio features"
+      },
+      "https://apidog.com/blog/stainless-api/": {
+        "id": 11,
+        "publisher": "Apidog",
+        "url": "https://apidog.com/blog/stainless-api/",
+        "title": "Why Should Developers Care About Stainless API SDK Generation",
+        "info": "Comprehensive overview of Stainless API's SDK generation approach, multi-language support (Python, TypeScript, Kotlin, Go, Java), type safety implementation, developer benefits including automation and CI/CD integration"
+      },
+      "https://www.speakeasy.com/blog/choosing-an-sdk-vendor": {
+        "id": 12,
+        "publisher": "Speakeasy",
+        "url": "https://www.speakeasy.com/blog/choosing-an-sdk-vendor",
+        "title": "Choosing an SDK vendor: Speakeasy vs Fern vs Stainless vs others",
+        "info": "Detailed comparison of SDK vendors (Speakeasy, Fern, Stainless, OpenAPI Typescript Codegen) covering OpenAPI support, SDK quality, OAuth support, webhooks, streaming, documentation generation, and automation capabilities"
+      },
+      "https://nordicapis.com/review-of-8-sdk-generators-for-apis-in-2025/": {
+        "id": 13,
+        "publisher": "Nordic APIs",
+        "url": "https://nordicapis.com/review-of-8-sdk-generators-for-apis-in-2025/",
+        "title": "Review of 8 SDK Generators for APIs in 2025",
+        "info": "Review of 8 SDK generators focusing on developer experience, CLI capability, combined SDK/documentation generation, with detailed analysis of Fern, APIMatic, Stainless, and Speakeasy approaches and code quality"
+      },
+      "https://medium.com/@parserdigital/how-to-manage-multi-language-open-source-sdks-on-githug-best-practices-tools-1a401b22544e": {
+        "id": 14,
+        "publisher": "Parser Digital",
+        "url": "https://medium.com/@parserdigital/how-to-manage-multi-language-open-source-sdks-on-githug-best-practices-tools-1a401b22544e",
+        "title": "How to Manage Multi-Language Open Source SDKs on GitHub",
+        "info": "Best practices for managing multi-language SDKs including repository structure (monorepo vs individual repos), consistency approaches, versioning, automation, and GitHub API integration for centralized management"
+      },
+      "https://www.speakeasy.com/blog/sdk-best-practices": {
+        "id": 15,
+        "publisher": "Speakeasy",
+        "url": "https://www.speakeasy.com/blog/sdk-best-practices",
+        "title": "SDK Best Practices",
+        "info": "SDK best practices emphasizing type safety, idiomatic design, limited dependencies, enterprise features (retries, pagination), and sustainable development through automation and CI/CD integration"
+      },
+      "https://liblab.com/blog/openapi-data-types-and-formats": {
+        "id": 16,
+        "publisher": "liblab",
+        "url": "https://liblab.com/blog/openapi-data-types-and-formats",
+        "title": "Mastering OpenAPI Types: Best Practices for Data Types and Formats",
+        "info": "OpenAPI data types and formats best practices for SDK generation, including detailed guidance on string, number, boolean, array, object types and validation attributes for better code generation"
+      },
+      "https://sdcourse.substack.com/p/day-88-multi-language-sdk-libraries": {
+        "id": 17,
+        "publisher": "Software Development Course",
+        "url": "https://sdcourse.substack.com/p/day-88-multi-language-sdk-libraries",
+        "title": "Day 88: Multi-Language SDK Libraries",
+        "info": "Multi-language SDK design principles covering idiomatic patterns for Python, Java, JavaScript, unified error handling, automatic retry logic, and language-specific considerations for building robust SDKs"
+      },
+      "https://www.mux.com/blog/an-adventure-in-openapi-v3-api-code-generation": {
+        "id": 18,
+        "publisher": "Mux",
+        "url": "https://www.mux.com/blog/an-adventure-in-openapi-v3-api-code-generation",
+        "title": "An adventure in OpenAPI V3 code generation",
+        "info": "Mux's comprehensive journey implementing OpenAPI V3 for SDK code generation, covering toolchain decisions, architecture challenges, polymorphism support, and solutions for scaling from 2 to 10+ language SDKs"
+      },
+      "https://github.com/OpenAPITools/openapi-generator": {
+        "id": 19,
+        "publisher": "OpenAPITools",
+        "url": "https://github.com/OpenAPITools/openapi-generator",
+        "title": "OpenAPI Generator",
+        "info": "OpenAPI Generator documentation covering 50+ supported languages, architecture components, multi-language SDK generation best practices, customization options, and CI/CD integration approaches"
+      }
+    },
+    "Modern Plugin Architecture and Streaming-First Design Patterns for SDKs": {
+      "https://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/": {
+        "id": 20,
+        "publisher": "AWS Builders Library",
+        "url": "https://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/",
+        "title": "Timeouts, retries and backoff with jitter",
+        "info": "Comprehensive strategies for managing failures in distributed systems, including timeout selection metrics, retry strategies, exponential backoff patterns, connection management, and jitter implementation. Covers AWS SDK throttling mechanisms and load amplification factors."
+      },
+      "https://solace.com/event-driven-architecture-patterns/": {
+        "id": 21,
+        "publisher": "Solace",
+        "url": "https://solace.com/event-driven-architecture-patterns/",
+        "title": "The Ultimate Guide to Event-Driven Architecture Patterns",
+        "info": "In-depth analysis of event-driven architecture patterns including event generation patterns (ECST, CQRS, CDC, Event Sourcing), communication patterns (Pub-Sub, Point-to-Point, Event Streaming), and consumption patterns (hierarchical topics, event filtering)."
+      },
+      "https://ably.com/topic/websocket-architecture-best-practices": {
+        "id": 22,
+        "publisher": "Ably",
+        "url": "https://ably.com/topic/websocket-architecture-best-practices",
+        "title": "WebSocket architecture best practices to design robust realtime systems",
+        "info": "Comprehensive WebSocket architecture best practices covering scaling challenges, architectural patterns (sharding, sticky sessions, pub/sub), operational best practices (connection optimization, backpressure, message integrity), and performance considerations."
+      },
+      "https://devcenter.heroku.com/articles/websocket-security": {
+        "id": 23,
+        "publisher": "Heroku Dev Center",
+        "url": "https://devcenter.heroku.com/articles/websocket-security",
+        "title": "WebSocket Security",
+        "info": "WebSocket security patterns including WSS protocol usage, authentication strategies (ticket-based authentication), security best practices, and input validation techniques for streaming systems."
+      },
+      "https://docs.stripe.com/webhooks": {
+        "id": 24,
+        "publisher": "Stripe",
+        "url": "https://docs.stripe.com/webhooks",
+        "title": "Receive Stripe events in your webhook endpoint",
+        "info": "Stripe's webhook architecture for real-time event delivery, including HTTPS POST mechanisms, JSON payloads, Event objects, signature verification, replay attack prevention, and automatic retry strategies with exponential backoff."
+      },
+      "https://medium.com/neural-engineer/openai-model-streaming-building-responsive-llm-applications-38712e582bce": {
+        "id": 25,
+        "publisher": "Neural Engineer (Medium)",
+        "url": "https://medium.com/neural-engineer/openai-model-streaming-building-responsive-llm-applications-38712e582bce",
+        "title": "OpenAI Model Streaming: Building Responsive LLM Applications",
+        "info": "OpenAI streaming implementation details covering HTTP chunked transfer encoding, connection lifecycle management, cancellation mechanisms, error handling strategies, and structured response formats for LLM applications."
+      },
+      "https://discord.com/blog/how-discord-reduced-websocket-traffic-by-40-percent": {
+        "id": 26,
+        "publisher": "Discord Engineering Blog",
+        "url": "https://discord.com/blog/how-discord-reduced-websocket-traffic-by-40-percent",
+        "title": "How Discord Reduced Websocket Traffic by 40%",
+        "info": "Discord's WebSocket traffic optimization strategies, migration from zlib to zstandard compression, streaming implementation details, passive sessions optimization with delta-based updates, and real-time scaling architecture."
+      },
+      "https://levelup.gitconnected.com/how-to-design-a-plugin-based-scalable-architecture-abb0b2481ea8": {
+        "id": 27,
+        "publisher": "Level Up (Medium)",
+        "url": "https://levelup.gitconnected.com/how-to-design-a-plugin-based-scalable-architecture-abb0b2481ea8",
+        "title": "How to design a plugin-based scalable architecture?",
+        "info": "Plugin-based scalable architecture design concepts covering scalability through plugin patterns, community contributions, continuous iteration support, and avoiding over-abstraction pitfalls."
+      },
+      "https://docs.aws.amazon.com/AmazonS3/latest/userguide/optimizing-performance-design-patterns.html": {
+        "id": 28,
+        "publisher": "AWS Documentation",
+        "url": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/optimizing-performance-design-patterns.html",
+        "title": "Performance design patterns for Amazon S3",
+        "info": "Amazon S3 performance design patterns including caching strategies, timeout and retry logic, horizontal scaling with request parallelization, high-request rate optimizations, byte-range fetch techniques, and transfer acceleration."
+      },
+      "https://learn.microsoft.com/en-us/azure/architecture/patterns/circuit-breaker": {
+        "id": 29,
+        "publisher": "Microsoft Azure Architecture Center",
+        "url": "https://learn.microsoft.com/en-us/azure/architecture/patterns/circuit-breaker",
+        "title": "Circuit Breaker Pattern",
+        "info": "Comprehensive circuit breaker pattern implementation for resilience, including state management techniques (Closed, Open, Half-Open states), fault handling strategies, state transition triggers, and integration with service mesh architectures."
+      },
+      "https://www.figma.com/blog/how-we-built-the-figma-plugin-system/": {
+        "id": 30,
+        "publisher": "Figma Engineering Blog",
+        "url": "https://www.figma.com/blog/how-we-built-the-figma-plugin-system/",
+        "title": "How to build a plugin system on the web and also sleep well at night",
+        "info": "Figma's plugin security architecture with iframe sandboxing, plugin isolation techniques using Realms shim, membrane pattern implementation, and secure plugin system design patterns including whitelist-based security and separation of concerns."
+      },
+      "https://blog.feathersjs.com/design-patterns-for-modern-web-apis-1f046635215": {
+        "id": 31,
+        "publisher": "FeathersJS Blog",
+        "url": "https://blog.feathersjs.com/design-patterns-for-modern-web-apis-1f046635215",
+        "title": "Design patterns for modern web APIs",
+        "info": "Modern web API design patterns covering service layer architecture, RESTful design constraints, middleware patterns for cross-cutting concerns, and real-time update strategies using event-driven approaches."
+      },
+      "https://dev.to/auth0/may-2025-in-auth0-async-auth-real-time-streams-and-custom-everything-2n60": {
+        "id": 32,
+        "publisher": "Auth0 (Dev.to)",
+        "url": "https://dev.to/auth0/may-2025-in-auth0-async-auth-real-time-streams-and-custom-everything-2n60",
+        "title": "May 2025 in Auth0: Async Auth, Real-Time Streams, and Custom Everything",
+        "info": "Auth0's real-time streaming capabilities including Client-Initiated Backchannel Authentication (CIBA) for asynchronous flows, Event Streams for extensibility with real-time event routing to webhooks and EventBridge, and fine-grained M2M token quotas."
+      },
+      "https://medium.com/@paulotaylor/twilio-streams-nodejs-websockets-redis-f3ca2f35a864": {
+        "id": 33,
+        "publisher": "Paulo Taylor (Medium)",
+        "url": "https://medium.com/@paulotaylor/twilio-streams-nodejs-websockets-redis-f3ca2f35a864",
+        "title": "Twilio Streams + NodeJS + Websockets + Redis",
+        "info": "Twilio real-time media streaming architecture using Node.js, WebSockets, and Redis for audio data distribution. Covers Twilio Streams API integration, WebSocket proxy patterns, Redis Pub/Sub implementation, and dynamic channel creation."
       }
     }
   }

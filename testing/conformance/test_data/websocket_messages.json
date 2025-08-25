@@ -1,0 +1,171 @@
+{
+  "connection_scenarios": [
+    {
+      "id": "ws_connect_001",
+      "description": "Basic WebSocket connection",
+      "input": {
+        "url": "wss://stream.hypersim.io/ws",
+        "headers": {
+          "Authorization": "Bearer test_token"
+        },
+        "timeout_ms": 5000
+      },
+      "expected_events": [
+        {
+          "type": "connection_opened",
+          "timeout_ms": 3000
+        },
+        {
+          "type": "connection_ready",
+          "data": {
+            "status": "connected",
+            "server_version": "string"
+          }
+        }
+      ]
+    }
+  ],
+  "subscription_scenarios": [
+    {
+      "id": "ws_sub_001",
+      "description": "Subscribe to block events",
+      "input": {
+        "subscription": {
+          "type": "blocks",
+          "network": "ethereum",
+          "filters": {}
+        }
+      },
+      "expected_messages": [
+        {
+          "type": "subscription_confirmed",
+          "data": {
+            "subscription_id": "string",
+            "status": "active"
+          }
+        },
+        {
+          "type": "block_update",
+          "data": {
+            "blockNumber": "number",
+            "blockHash": "string",
+            "timestamp": "number",
+            "transactionCount": "number"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ws_sub_002",
+      "description": "Subscribe to transaction events",
+      "input": {
+        "subscription": {
+          "type": "transactions",
+          "network": "ethereum",
+          "filters": {
+            "addresses": ["0x742d35Cc6Bb23D8B09F1fD24D4C8AE3c87A86cF0"]
+          }
+        }
+      },
+      "expected_messages": [
+        {
+          "type": "subscription_confirmed",
+          "data": {
+            "subscription_id": "string",
+            "status": "active"
+          }
+        },
+        {
+          "type": "transaction_update",
+          "data": {
+            "hash": "string",
+            "from": "string",
+            "to": "string",
+            "value": "string",
+            "status": "pending|confirmed|failed"
+          }
+        }
+      ]
+    }
+  ],
+  "streaming_scenarios": [
+    {
+      "id": "ws_stream_001",
+      "description": "Real-time simulation streaming",
+      "input": {
+        "stream_type": "simulation_results",
+        "batch_size": 10,
+        "frequency_ms": 1000
+      },
+      "expected_behavior": {
+        "message_frequency_ms": 1000,
+        "batch_size": 10,
+        "message_order": "sequential",
+        "data_consistency": "guaranteed"
+      }
+    }
+  ],
+  "error_scenarios": [
+    {
+      "id": "ws_error_001",
+      "description": "Handle connection timeout",
+      "input": {
+        "url": "wss://timeout.example.com/ws",
+        "timeout_ms": 1000
+      },
+      "expected_error": {
+        "code": "CONNECTION_TIMEOUT",
+        "message": "WebSocket connection timed out",
+        "recovery_action": "retry_with_backoff"
+      }
+    },
+    {
+      "id": "ws_error_002",
+      "description": "Handle invalid subscription",
+      "input": {
+        "subscription": {
+          "type": "invalid_type",
+          "network": "unknown_network"
+        }
+      },
+      "expected_error": {
+        "code": "INVALID_SUBSCRIPTION",
+        "message": "Unsupported subscription type or network",
+        "details": {
+          "supported_types": ["blocks", "transactions", "logs"],
+          "supported_networks": ["ethereum", "polygon", "bsc"]
+        }
+      }
+    },
+    {
+      "id": "ws_error_003",
+      "description": "Handle unexpected disconnection",
+      "scenario": "force_disconnect",
+      "expected_behavior": {
+        "reconnection_attempts": 3,
+        "backoff_strategy": "exponential",
+        "subscription_restoration": "automatic",
+        "event_buffer_size": 100
+      }
+    }
+  ],
+  "message_patterns": {
+    "heartbeat": {
+      "interval_ms": 30000,
+      "message": {
+        "type": "ping",
+        "timestamp": "number"
+      },
+      "expected_response": {
+        "type": "pong",
+        "timestamp": "number"
+      }
+    },
+    "keep_alive": {
+      "interval_ms": 60000,
+      "message": {
+        "type": "keep_alive"
+      }
+    }
+  }
+}

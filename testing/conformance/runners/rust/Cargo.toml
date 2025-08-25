@@ -1,0 +1,25 @@
+[package]
+name = "hypersim-conformance-rust"
+version = "1.0.0"
+edition = "2021"
+
+[dependencies]
+hypersim-sdk = { path = "../../../rust" }
+tokio = { version = "1.0", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+chrono = { version = "0.4", features = ["serde"] }
+anyhow = "1.0"
+psutil = "3.2"
+
+[dev-dependencies]
+criterion = { version = "0.5", features = ["html_reports"] }
+tokio-test = "0.4"
+
+[[bench]]
+name = "performance_benchmarks"
+harness = false
+
+[features]
+default = []
+benchmarks = ["criterion"]

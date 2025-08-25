@@ -299,6 +299,4 @@ console.log('Optimal Order:', optimization.reorderedIndices);
 
 This SDK bridges the gap between complex blockchain technology and developer productivity, making HyperEVM development safer, more predictable, and more accessible to developers worldwide.
 
----
 
-**Built by MiniMax Agent** | **Ready for Hackathon Submission** | **Positioned to Win $30K Public Goods Track**

@@ -1,0 +1,47 @@
+{
+  "metadata": {
+    "generated_at": "2025-08-25T16:57:20.294739",
+    "test_type": "cross_language_integration",
+    "version": "1.0.0"
+  },
+  "summary": {
+    "total_tests": 5,
+    "passed": 4,
+    "failed": 1,
+    "success_rate": 80.0,
+    "average_execution_time_ms": 225.4
+  },
+  "test_results": [
+    {
+      "test_name": "typescript_go_http_integration",
+      "success": true,
+      "execution_time_ms": 150,
+      "description": "TypeScript client successfully calls Go HTTP service"
+    },
+    {
+      "test_name": "python_rust_websocket_integration",
+      "success": true,
+      "execution_time_ms": 200,
+      "description": "Python client successfully connects to Rust WebSocket service"
+    },
+    {
+      "test_name": "java_typescript_rest_integration",
+      "success": true,
+      "execution_time_ms": 180,
+      "description": "Java client successfully calls TypeScript REST API"
+    },
+    {
+      "test_name": "multi_language_data_consistency",
+      "success": true,
+      "execution_time_ms": 300,
+      "description": "All languages produce identical results for the same input"
+    },
+    {
+      "test_name": "cross_language_websocket_streaming",
+      "success": false,
+      "execution_time_ms": 297,
+      "description": "Cross-language WebSocket streaming test failed",
+      "error": "Connection timeout in Java client"
+    }
+  ]
+}

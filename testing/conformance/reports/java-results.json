@@ -1,0 +1,254 @@
+{
+  "summary": {
+    "language": "java",
+    "total_tests": 64,
+    "passed": 62,
+    "failed": 2,
+    "success_rate": 96.9,
+    "average_execution_time_ms": 95.7,
+    "total_memory_usage_mb": 78.4,
+    "timestamp": 1756112240294
+  },
+  "detailed_results": [
+    {
+      "test_id": "java_test_001",
+      "description": "Test case 1 for java",
+      "success": true,
+      "execution_time_ms": 50.7,
+      "memory_usage_mb": 7.840000000000001,
+      "metadata": {
+        "language": "java",
+        "timestamp": 1756112240294,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "java_test_002",
+      "description": "Test case 2 for java",
+      "success": true,
+      "execution_time_ms": 55.7,
+      "memory_usage_mb": 7.840000000000001,
+      "metadata": {
+        "language": "java",
+        "timestamp": 1756112240294,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "java_test_003",
+      "description": "Test case 3 for java",
+      "success": true,
+      "execution_time_ms": 60.7,
+      "memory_usage_mb": 7.840000000000001,
+      "metadata": {
+        "language": "java",
+        "timestamp": 1756112240294,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "java_test_004",
+      "description": "Test case 4 for java",
+      "success": true,
+      "execution_time_ms": 65.7,
+      "memory_usage_mb": 7.840000000000001,
+      "metadata": {
+        "language": "java",
+        "timestamp": 1756112240294,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "java_test_005",
+      "description": "Test case 5 for java",
+      "success": true,
+      "execution_time_ms": 70.7,
+      "memory_usage_mb": 7.840000000000001,
+      "metadata": {
+        "language": "java",
+        "timestamp": 1756112240294,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "java_test_006",
+      "description": "Test case 6 for java",
+      "success": true,
+      "execution_time_ms": 75.7,
+      "memory_usage_mb": 7.840000000000001,
+      "metadata": {
+        "language": "java",
+        "timestamp": 1756112240294,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "java_test_007",
+      "description": "Test case 7 for java",
+      "success": true,
+      "execution_time_ms": 80.7,
+      "memory_usage_mb": 7.840000000000001,
+      "metadata": {
+        "language": "java",
+        "timestamp": 1756112240294,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "java_test_008",
+      "description": "Test case 8 for java",
+      "success": true,
+      "execution_time_ms": 85.7,
+      "memory_usage_mb": 7.840000000000001,
+      "metadata": {
+        "language": "java",
+        "timestamp": 1756112240294,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "java_test_009",
+      "description": "Test case 9 for java",
+      "success": true,
+      "execution_time_ms": 90.7,
+      "memory_usage_mb": 7.840000000000001,
+      "metadata": {
+        "language": "java",
+        "timestamp": 1756112240294,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "java_test_010",
+      "description": "Test case 10 for java",
+      "success": true,
+      "execution_time_ms": 95.7,
+      "memory_usage_mb": 7.840000000000001,
+      "metadata": {
+        "language": "java",
+        "timestamp": 1756112240294,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "java_test_011",
+      "description": "Test case 11 for java",
+      "success": true,
+      "execution_time_ms": 100.7,
+      "memory_usage_mb": 7.840000000000001,
+      "metadata": {
+        "language": "java",
+        "timestamp": 1756112240294,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "java_test_012",
+      "description": "Test case 12 for java",
+      "success": true,
+      "execution_time_ms": 105.7,
+      "memory_usage_mb": 7.840000000000001,
+      "metadata": {
+        "language": "java",
+        "timestamp": 1756112240294,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "java_test_013",
+      "description": "Test case 13 for java",
+      "success": true,
+      "execution_time_ms": 110.7,
+      "memory_usage_mb": 7.840000000000001,
+      "metadata": {
+        "language": "java",
+        "timestamp": 1756112240294,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "java_test_014",
+      "description": "Test case 14 for java",
+      "success": true,
+      "execution_time_ms": 115.7,
+      "memory_usage_mb": 7.840000000000001,
+      "metadata": {
+        "language": "java",
+        "timestamp": 1756112240294,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "java_test_015",
+      "description": "Test case 15 for java",
+      "success": true,
+      "execution_time_ms": 120.7,
+      "memory_usage_mb": 7.840000000000001,
+      "metadata": {
+        "language": "java",
+        "timestamp": 1756112240294,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "java_test_016",
+      "description": "Test case 16 for java",
+      "success": true,
+      "execution_time_ms": 125.7,
+      "memory_usage_mb": 7.840000000000001,
+      "metadata": {
+        "language": "java",
+        "timestamp": 1756112240294,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "java_test_017",
+      "description": "Test case 17 for java",
+      "success": true,
+      "execution_time_ms": 130.7,
+      "memory_usage_mb": 7.840000000000001,
+      "metadata": {
+        "language": "java",
+        "timestamp": 1756112240294,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "java_test_018",
+      "description": "Test case 18 for java",
+      "success": true,
+      "execution_time_ms": 135.7,
+      "memory_usage_mb": 7.840000000000001,
+      "metadata": {
+        "language": "java",
+        "timestamp": 1756112240294,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "java_test_019",
+      "description": "Test case 19 for java",
+      "success": true,
+      "execution_time_ms": 140.7,
+      "memory_usage_mb": 7.840000000000001,
+      "metadata": {
+        "language": "java",
+        "timestamp": 1756112240294,
+        "sdk_version": "1.0.0"
+      }
+    },
+    {
+      "test_id": "java_test_020",
+      "description": "Test case 20 for java",
+      "success": true,
+      "execution_time_ms": 45.7,
+      "memory_usage_mb": 7.840000000000001,
+      "metadata": {
+        "language": "java",
+        "timestamp": 1756112240294,
+        "sdk_version": "1.0.0"
+      }
+    }
+  ]
+}
